@@ -21,15 +21,25 @@ public class Main {
 
     //2
     static ArrayList<Integer> generaListaInvertita(ArrayList<Integer> lista) {
+
         ArrayList<Integer> nuovaLista = new ArrayList<>();
         for (int i = 0; i < lista.size(); i++) {
             nuovaLista.add(lista.get(i));
         }
         return nuovaLista;
-
     }
-    //3
 
+    //3
+    static void pariDispari(ArrayList<Integer> lista, boolean pari) {
+        for (int i = 0; i < lista.size(); i++) {
+            if (pari && i % 2 == 0) {
+                System.out.println(lista.get(i));
+            }
+            if (!pari && i % 2 != 0) {
+                System.out.println(lista.get(i));
+            }
+        }
+    }
 
     static void main(String[] args) {
         int N = 5;
@@ -41,6 +51,12 @@ public class Main {
         ArrayList<Integer> nuovaLista = Main.generaListaInvertita(lista);
         System.out.println(lista);
         System.out.print(lista.reversed());
+
+//3
+        System.out.println("numeri pari: ");
+        pariDispari(lista, true);
+        System.out.println("numeri dispari: ");
+        pariDispari(lista, false);
 
 
     }
