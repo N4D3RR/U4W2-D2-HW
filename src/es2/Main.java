@@ -49,8 +49,9 @@ public class Main {
 
 //2
         ArrayList<Integer> nuovaLista = Main.generaListaInvertita(lista);
-        System.out.println(lista);
-        System.out.print(lista.reversed());
+        System.out.print(lista);
+        System.out.println(lista.reversed());
+
 
 //3
         System.out.println("numeri pari: ");
